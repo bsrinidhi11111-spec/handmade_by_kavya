@@ -2,306 +2,480 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
+    <title>Our Collection | Handmade by Kavya</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Shop | Handmade by Kavya</title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+<header class="site-header">
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+    <div class="container header-inner">
 
-  <header class="main-header">
+        <a href="index.html" class="brand">
 
-    <div class="header-container">
+            <span class="brand-icon">✿</span>
 
-
-      <a
-        href="index.html"
-        class="brand"
-      >
-
-        <span class="brand-icon">
-          ✿
-        </span>
-
-        <span class="brand-text">
-
-          <strong>
-            Handmade by Kavya
-          </strong>
-
-          <small>
-            Made with Love
-          </small>
-
-        </span>
-
-      </a>
-
-
-      <nav class="main-nav">
-
-        <a href="index.html">
-          Home
-        </a>
-
-        <a
-          href="products.html?category=bangles"
-        >
-          Bangles
-        </a>
-
-        <a
-          href="products.html?category=earrings"
-        >
-          Earrings
-        </a>
-
-        <a
-          href="products.html?category=hair"
-        >
-          Hair Accessories
-        </a>
-
-      </nav>
-
-
-      <div class="header-actions">
-
-        <a
-          href="cart.html"
-          class="cart-icon"
-        >
-
-          🛍️
-
-          <span id="cartCount">
-            0
-          </span>
+            <div>
+                <strong>Handmade by Kavya</strong>
+                <small>Made with Love</small>
+            </div>
 
         </a>
 
-      </div>
 
+        <nav class="main-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="products.html">Shop</a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
 
     </div>
 
-  </header>
+</header>
 
 
+<main class="shop-page">
 
-  <!-- =========================
-       SHOP HEADER
-  ========================== -->
+<div class="container">
 
-  <section class="shop-header">
+    <!-- PAGE TITLE -->
 
-    <p>
-      HANDMADE COLLECTION
-    </p>
+    <div class="shop-heading">
 
-    <h1>
-      Shop Our Collection
-    </h1>
+        <span class="section-label">
+            HANDMADE COLLECTION
+        </span>
 
-    <span>
-      Beautiful handmade accessories,
-      created with love.
-    </span>
+        <h1>Our Collection</h1>
 
-  </section>
+        <p>
+            Beautiful handmade accessories,
+            created with love.
+        </p>
 
+    </div>
 
 
-  <!-- =========================
-       SHOP CONTROLS
-  ========================== -->
-
-  <section class="shop-section">
-
+    <!-- SEARCH + CATEGORY -->
 
     <div class="shop-controls">
 
-
-      <!-- SEARCH -->
-
-      <div class="search-box">
-
         <input
-          type="search"
-          id="searchInput"
-          placeholder="Search products..."
+            type="search"
+            id="searchInput"
+            placeholder="Search products..."
+            oninput="displayProducts()"
         >
 
-      </div>
 
-
-      <!-- CATEGORY -->
-
-      <div class="category-filter">
-
-        <button
-          class="filter-btn active"
-          data-category="all"
+        <select
+            id="categoryFilter"
+            onchange="displayProducts()"
         >
-          All
-        </button>
 
-        <button
-          class="filter-btn"
-          data-category="bangles"
-        >
-          Bangles
-        </button>
+            <option value="All">
+                All Categories
+            </option>
 
-        <button
-          class="filter-btn"
-          data-category="earrings"
-        >
-          Earrings
-        </button>
+            <option value="Bangles">
+                Bangles
+            </option>
 
-        <button
-          class="filter-btn"
-          data-category="hair"
-        >
-          Hair Accessories
-        </button>
+            <option value="Earrings">
+                Earrings
+            </option>
 
-      </div>
+            <option value="Hair Accessories">
+                Hair Accessories
+            </option>
 
+        </select>
 
     </div>
 
 
-
-    <!-- =========================
-         PRODUCTS
-    ========================== -->
+    <!-- PRODUCTS -->
 
     <div
-      id="productGrid"
-      class="product-grid"
-    >
+        id="productsContainer"
+        class="product-grid"
+    ></div>
 
-      <!--
-        PRODUCTS WILL APPEAR HERE.
+</div>
 
-        IMPORTANT:
-        Final version lo products
-        admin dashboard nundi add chestham.
-      -->
+</main>
 
-      <div class="empty-products">
 
-        <div>
-          ✿
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-brand">
+
+            <span>✿</span>
+
+            <strong>
+                Handmade by Kavya
+            </strong>
+
         </div>
 
-        <h2>
-          Your Collection
-        </h2>
-
         <p>
-          Products added from your
-          admin dashboard will appear here.
+            Handmade accessories crafted with love.
         </p>
 
-      </div>
 
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer>
-
-    <div class="footer-content">
-
-
-      <div class="footer-brand">
-
-        <h3>
-          Handmade by Kavya
-        </h3>
-
-        <p>
-          Handmade Accessories
-          • Made with Love ♡
+        <p class="copyright">
+            © 2026 Handmade by Kavya.
+            All rights reserved.
         </p>
 
-      </div>
-
-
-      <div class="footer-links">
-
-        <a href="index.html">
-          Home
-        </a>
-
-        <a href="products.html">
-          Shop
-        </a>
-
-        <a href="cart.html">
-          Cart
-        </a>
-
-        <a
-          href="https://www.instagram.com/handmade.by_kavya/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-      </div>
-
-
     </div>
 
-
-    <div class="footer-bottom">
-
-      <p>
-        © 2026 Handmade by Kavya.
-        All rights reserved.
-      </p>
-
-    </div>
-
-  </footer>
+</footer>
 
 
+<script src="script.js"></script>
 
-  <!-- JAVASCRIPT -->
 
-  <script src="script.js"></script>
+<script>
 
+/* =========================================
+   GET PRODUCTS
+========================================= */
+
+function getProducts() {
+
+    return JSON.parse(
+        localStorage.getItem(
+            "handmadeKavyaProducts"
+        )
+    ) || [];
+
+}
+
+
+/* =========================================
+   DISPLAY PRODUCTS
+========================================= */
+
+function displayProducts() {
+
+    const container =
+        document.getElementById(
+            "productsContainer"
+        );
+
+
+    const search =
+        document.getElementById(
+            "searchInput"
+        ).value
+        .toLowerCase()
+        .trim();
+
+
+    const category =
+        document.getElementById(
+            "categoryFilter"
+        ).value;
+
+
+    const products =
+        getProducts();
+
+
+    const filteredProducts =
+        products.filter(product => {
+
+            const matchesSearch =
+                product.name
+                    .toLowerCase()
+                    .includes(search);
+
+
+            const matchesCategory =
+                category === "All" ||
+                product.category === category;
+
+
+            return (
+                matchesSearch &&
+                matchesCategory
+            );
+
+        });
+
+
+    /* NO PRODUCTS */
+
+    if (filteredProducts.length === 0) {
+
+        container.innerHTML = `
+
+            <div
+                class="no-products"
+                style="grid-column:1/-1;"
+            >
+
+                <div class="no-products-icon">
+                    ✿
+                </div>
+
+                <h3>
+                    No Products Found
+                </h3>
+
+                <p>
+                    ${
+                        products.length === 0
+                        ? "Products added by you will appear here."
+                        : "Try another search or category."
+                    }
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /* PRODUCT CARDS */
+
+    container.innerHTML =
+        filteredProducts
+        .map(product => {
+
+            const isOutOfStock =
+                Number(product.stock) <= 0;
+
+
+            return `
+
+                <div class="product-card">
+
+
+                    <div class="product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <div class="product-category">
+
+                            ${product.category}
+
+                        </div>
+
+
+                        <h3>
+
+                            ${product.name}
+
+                        </h3>
+
+
+                        ${
+                            product.description
+                            ? `
+                                <p style="
+                                    font-size:13px;
+                                    color:#806a64;
+                                    margin-top:5px;
+                                ">
+                                    ${product.description}
+                                </p>
+                              `
+                            : ""
+                        }
+
+
+                        <div class="product-price">
+
+                            ₹${Number(
+                                product.price
+                            ).toFixed(2)}
+
+                        </div>
+
+
+                        ${
+                            isOutOfStock
+
+                            ?
+
+                            `
+                            <div class="out-of-stock">
+                                Out of Stock
+                            </div>
+                            `
+
+                            :
+
+                            `
+                            <button
+                                class="btn btn-primary"
+                                onclick="
+                                    addProductToCart(
+                                        '${product.id}'
+                                    )
+                                "
+                            >
+                                Add to Cart
+                            </button>
+                            `
+                        }
+
+                    </div>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+/* =========================================
+   ADD PRODUCT TO CART
+========================================= */
+
+function addProductToCart(productId) {
+
+    const products =
+        getProducts();
+
+
+    const product =
+        products.find(
+            item =>
+                item.id === productId
+        );
+
+
+    if (!product) {
+
+        alert(
+            "Product not found."
+        );
+
+        return;
+
+    }
+
+
+    if (Number(product.stock) <= 0) {
+
+        alert(
+            "This product is out of stock."
+        );
+
+        return;
+
+    }
+
+
+    addToCart({
+
+        id: product.id,
+
+        name: product.name,
+
+        price: Number(product.price),
+
+        image: product.image,
+
+        quantity: 1
+
+    });
+
+
+    alert(
+        product.name +
+        " added to cart!"
+    );
+
+
+    updateCartCount();
+
+}
+
+
+/* =========================================
+   CATEGORY FROM URL
+========================================= */
+
+function checkCategoryFromURL() {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const category =
+        params.get("category");
+
+
+    if (!category) return;
+
+
+    const select =
+        document.getElementById(
+            "categoryFilter"
+        );
+
+
+    if (
+        [
+            "Bangles",
+            "Earrings",
+            "Hair Accessories"
+        ].includes(category)
+    ) {
+
+        select.value = category;
+
+    }
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+checkCategoryFromURL();
+
+displayProducts();
+
+updateCartCount();
+
+</script>
 
 </body>
-
 </html>
