@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Checkout | Handmade by Kavya</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="main-header">
+
+    <div class="header-container">
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+
+        <span class="brand-icon">
+          ✿
+        </span>
+
+        <span class="brand-text">
+
+          <strong>
+            Handmade by Kavya
+          </strong>
+
+          <small>
+            Made with Love
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="products.html">
+          Shop
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+        <a
+          href="cart.html"
+          class="cart-icon"
+        >
+
+          🛍️
+
+          <span id="cartCount">
+            0
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       CHECKOUT
+  ========================== -->
+
+  <main class="checkout-page">
+
+
+    <div class="section-heading">
+
+      <p>
+        SECURE CHECKOUT
+      </p>
+
+      <h1>
+        Complete Your Order
+      </h1>
+
+      <span>
+        Please enter your delivery details.
+      </span>
+
+    </div>
+
+
+
+    <div class="checkout-layout">
+
+
+      <!-- =========================
+           CUSTOMER DETAILS
+      ========================== -->
+
+      <section class="checkout-form-card">
+
+        <h2>
+          Delivery Details
+        </h2>
+
+
+        <form id="checkoutForm">
+
+
+          <!-- NAME -->
+
+          <div class="form-group">
+
+            <label for="customerName">
+              Full Name *
+            </label>
+
+            <input
+              type="text"
+              id="customerName"
+              name="customerName"
+              placeholder="Enter your full name"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- PHONE -->
+
+          <div class="form-group">
+
+            <label for="phone">
+              Mobile Number *
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="10-digit mobile number"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="form-group">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            >
+
+          </div>
+
+
+
+          <!-- ADDRESS -->
+
+          <div class="form-group">
+
+            <label for="address">
+              House / Flat / Street Address *
+            </label>
+
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              placeholder="Enter complete address"
+              required
+            ></textarea>
+
+          </div>
+
+
+
+          <!-- AREA -->
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="area">
+                Area / Village *
+              </label>
+
+              <input
+                type="text"
+                id="area"
+                name="area"
+                placeholder="Area / Village"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="city">
+                City *
+              </label>
+
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="City"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <!-- STATE -->
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="district">
+                District *
+              </label>
+
+              <input
+                type="text"
+                id="district"
+                name="district"
+                placeholder="District"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="pincode">
+                PIN Code *
+              </label>
+
+              <input
+                type="text"
+                id="pincode"
+                name="pincode"
+                placeholder="6-digit PIN"
+                maxlength="6"
+                pattern="[0-9]{6}"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="state">
+              State *
+            </label>
+
+            <select
+              id="state"
+              name="state"
+              required
+            >
+
+              <option value="">
+                Select State
+              </option>
+
+              <option value="Telangana">
+                Telangana
+              </option>
+
+              <option value="Andhra Pradesh">
+                Andhra Pradesh
+              </option>
+
+              <option value="Karnataka">
+                Karnataka
+              </option>
+
+              <option value="Tamil Nadu">
+                Tamil Nadu
+              </option>
+
+              <option value="Maharashtra">
+                Maharashtra
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- PAYMENT -->
+
+          <div class="payment-section">
+
+            <h2>
+              Payment
+            </h2>
+
+            <div class="online-payment">
+
+              <span class="payment-icon">
+                💳
+              </span>
+
+              <div>
+
+                <strong>
+                  Online Payment
+                </strong>
+
+                <p>
+                  UPI / Card / Net Banking
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="cod-removed">
+
+              ✓ Cash on Delivery is not available.
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SUBMIT -->
+
+          <button
+            type="submit"
+            class="place-order-button"
+          >
+            Continue to Payment →
+          </button>
+
+
+        </form>
+
+      </section>
+
+
+
+      <!-- =========================
+           ORDER SUMMARY
+      ========================== -->
+
+      <aside class="checkout-summary">
+
+        <h2>
+          Your Order
+        </h2>
+
+
+        <div id="checkoutItems">
+
+          <!-- JavaScript adds products -->
+
+        </div>
+
+
+        <div class="checkout-summary-line">
+
+          <span>
+            Subtotal
+          </span>
+
+          <strong id="checkoutSubtotal">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <div class="checkout-summary-line">
+
+          <span>
+            Delivery
+          </span>
+
+          <strong>
+            Calculated
+          </strong>
+
+        </div>
+
+
+        <div class="checkout-total">
+
+          <span>
+            Total
+          </span>
+
+          <strong id="checkoutTotal">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <div class="secure-note">
+
+          🔒 Your order details are securely processed.
+
+        </div>
+
+      </aside>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <h3>
+          Handmade by Kavya
+        </h3>
+
+        <p>
+          Handmade Accessories
+          • Made with Love ♡
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="products.html">
+          Shop
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+        <a
+          href="https://www.instagram.com/handmade.by_kavya/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Handmade by Kavya.
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+
+  <script>
+
+    /* ---------- SHOW CART COUNT ---------- */
+
+    updateCartCount();
+
+
+
+    /* ---------- DISPLAY ORDER ---------- */
+
+    function displayCheckout() {
+
+      const cart =
+        JSON.parse(
+          localStorage.getItem("kavyaCart")
+        ) || [];
+
+
+      const container =
+        document.getElementById("checkoutItems");
+
+
+      const subtotalElement =
+        document.getElementById("checkoutSubtotal");
+
+
+      const totalElement =
+        document.getElementById("checkoutTotal");
+
+
+      if (cart.length === 0) {
+
+        container.innerHTML = `
+          <p>
+            Your cart is empty.
+          </p>
+
+          <a href="products.html">
+            Continue Shopping
+          </a>
+        `;
+
+        return;
+
+      }
+
+
+      let subtotal = 0;
+
+
+      container.innerHTML = "";
+
+
+      cart.forEach(function(item) {
+
+        const quantity =
+          Number(item.quantity || 1);
+
+        const price =
+          Number(item.price || 0);
+
+        const total =
+          price * quantity;
+
+        subtotal += total;
+
+
+        const div =
+          document.createElement("div");
+
+        div.className =
+          "checkout-product";
+
+
+        div.innerHTML = `
+
+          <div>
+
+            <strong>
+              ${item.name}
+            </strong>
+
+            <small>
+              Qty: ${quantity}
+            </small>
+
+          </div>
+
+          <strong>
+            ₹${total}
+          </strong>
+
+        `;
+
+
+        container.appendChild(div);
+
+      });
+
+
+      subtotalElement.textContent =
+        "₹" + subtotal;
+
+
+      totalElement.textContent =
+        "₹" + subtotal;
+
+    }
+
+
+    displayCheckout();
+
+
+
+    /* ---------- PLACE ORDER ---------- */
+
+    document
+      .getElementById("checkoutForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+
+          const cart =
+            JSON.parse(
+              localStorage.getItem("kavyaCart")
+            ) || [];
+
+
+          if (cart.length === 0) {
+
+            alert(
+              "Your cart is empty."
+            );
+
+            window.location.href =
+              "products.html";
+
+            return;
+
+          }
+
+
+          const order = {
+
+            orderId:
+              generateOrderId(),
+
+            orderDate:
+              new Date().toISOString(),
+
+            status:
+              "Order Placed",
+
+            customer: {
+
+              name:
+                document
+                  .getElementById("customerName")
+                  .value
+                  .trim(),
+
+              phone:
+                document
+                  .getElementById("phone")
+                  .value
+                  .trim(),
+
+              email:
+                document
+                  .getElementById("email")
+                  .value
+                  .trim(),
+
+              address:
+                document
+                  .getElementById("address")
+                  .value
+                  .trim(),
+
+              area:
+                document
+                  .getElementById("area")
+                  .value
+                  .trim(),
+
+              city:
+                document
+                  .getElementById("city")
+                  .value
+                  .trim(),
+
+              district:
+                document
+                  .getElementById("district")
+                  .value
+                  .trim(),
+
+              pincode:
+                document
+                  .getElementById("pincode")
+                  .value
+                  .trim(),
+
+              state:
+                document
+                  .getElementById("state")
+                  .value
+
+            },
+
+
+            payment: {
+
+              method:
+                "Online Payment",
+
+              status:
+                "Pending"
+
+            },
+
+
+            items:
+              cart,
+
+
+            total:
+              getCartTotal()
+
+          };
+
+
+          /*
+             DEMO ORDER STORAGE
+
+             Final version lo
+             secure database/payment
+             connect chestham.
+          */
+
+          saveOrder(order);
+
+
+          /*
+             Cart clear
+          */
+
+          localStorage.removeItem(
+            "kavyaCart"
+          );
+
+
+          alert(
+            "Order details saved successfully! Order ID: "
+            + order.orderId
+          );
+
+
+          /*
+             Final version lo
+             payment gateway page ki
+             redirect chestham.
+          */
+
+          window.location.href =
+            "index.html";
+
+        }
+      );
+
+  </script>
+
+
+</body>
+
+</html>
