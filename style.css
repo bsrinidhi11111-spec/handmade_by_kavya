@@ -1,0 +1,669 @@
+/* ========================================
+   HANDMADE BY KAVYA
+   PREMIUM WEBSITE STYLES
+======================================== */
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaf7;
+  color: #432d29;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.main-header {
+  width: 100%;
+  background: rgba(255, 250, 247, 0.96);
+  border-bottom: 1px solid #ead8d0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #4b2925;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ead0c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #7a4038;
+}
+
+.brand-text strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.brand-text small {
+  display: block;
+  margin-top: 1px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9a7169;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.main-nav a {
+  position: relative;
+  text-decoration: none;
+  color: #513936;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #9b5d52;
+  transition: 0.3s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: #9b5d52;
+}
+
+
+/* ---------- HEADER ACTIONS ---------- */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.shop-link {
+  text-decoration: none;
+  background: #7d4b43;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.shop-link:hover {
+  background: #5f332e;
+  transform: translateY(-2px);
+}
+
+.cart-icon {
+  position: relative;
+  text-decoration: none;
+  font-size: 23px;
+  color: #4b2925;
+}
+
+.cart-icon span {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: #9b5d52;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      #f3ded5 0,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      #ead4cc 0,
+      transparent 30%
+    ),
+    #fff7f3;
+
+  padding: 80px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "✿";
+  position: absolute;
+  top: 80px;
+  left: 8%;
+  font-size: 80px;
+  color: rgba(155, 93, 82, 0.08);
+}
+
+.hero::after {
+  content: "✦";
+  position: absolute;
+  bottom: 70px;
+  right: 10%;
+  font-size: 70px;
+  color: rgba(155, 93, 82, 0.08);
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-small-title {
+  color: #9b5d52;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 1.05;
+  font-weight: 500;
+  color: #432d29;
+}
+
+.hero h1 span {
+  display: block;
+  color: #9b5d52;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 620px;
+  margin: 25px auto 35px;
+  color: #745d58;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.primary-button,
+.secondary-button,
+.instagram-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #7d4b43;
+  color: white;
+  box-shadow: 0 8px 20px rgba(125, 75, 67, 0.18);
+}
+
+.primary-button:hover {
+  background: #5f332e;
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid #9b5d52;
+  color: #7d4b43;
+  background: transparent;
+}
+
+.secondary-button:hover {
+  background: #7d4b43;
+  color: white;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading p,
+.section-label {
+  color: #9b5d52;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #432d29;
+}
+
+.section-heading span {
+  display: block;
+  margin-top: 8px;
+  color: #806a65;
+  font-size: 14px;
+}
+
+
+/* ========================================
+   CATEGORIES
+======================================== */
+
+.categories {
+  padding: 90px 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.category-card {
+  text-decoration: none;
+  text-align: center;
+  padding: 45px 25px;
+  border: 1px solid #ead8d0;
+  border-radius: 20px;
+  background: #fffdfb;
+  transition: 0.35s;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(91, 54, 48, 0.10);
+  border-color: #c99f93;
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #f2ded6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.category-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  color: #806a65;
+  font-size: 14px;
+}
+
+.category-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #9b5d52;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* ========================================
+   WHY HANDMADE
+======================================== */
+
+.why-handmade {
+  background: #f7ebe6;
+  padding: 90px 25px;
+}
+
+.features {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: #9b5d52;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  color: #806a65;
+  font-size: 13px;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about {
+  padding: 100px 25px;
+  background: #fffdfb;
+}
+
+.about-content {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-content h2 span {
+  color: #9b5d52;
+  font-style: italic;
+}
+
+.about-content p:not(.section-label) {
+  color: #745d58;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+
+/* ========================================
+   INSTAGRAM
+======================================== */
+
+.instagram {
+  text-align: center;
+  padding: 85px 25px;
+  background: #f7ebe6;
+}
+
+.instagram-button {
+  background: #7d4b43;
+  color: white;
+}
+
+.instagram-button:hover {
+  background: #5f332e;
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  background: #3f2926;
+  color: #f9eeea;
+  padding: 45px 25px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  color: #d9c4be;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ead8d0;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #cbb5af;
+  font-size: 11px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .header-container {
+    padding: 12px 15px;
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-top: 5px;
+  }
+
+  .main-nav a {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .shop-link {
+    display: none;
+  }
+
+  .category-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .brand-text strong {
+    font-size: 16px;
+  }
+
+  .brand-text small {
+    font-size: 8px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .hero {
+    min-height: 560px;
+    padding: 70px 18px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 220px;
+  }
+}
