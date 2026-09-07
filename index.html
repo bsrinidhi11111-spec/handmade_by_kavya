@@ -3,353 +3,360 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Handmade by Kavya</title>
 
 <style>
-
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#fff8fb;
-    color:#333;
+  background:#fff7fb;
+  color:#4a2638;
 }
 
-/* NAVBAR */
-
 nav{
-    background:white;
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:100;
-    box-shadow:0 2px 10px #ddd;
+  background:white;
+  padding:16px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#c2185b;
+  font-size:22px;
+  font-weight:bold;
+  color:#c43d76;
 }
 
 nav a{
-    text-decoration:none;
-    color:#333;
-    margin-left:18px;
-    font-weight:bold;
+  text-decoration:none;
+  color:#4a2638;
+  margin-left:15px;
+  font-weight:bold;
 }
 
-/* HERO */
-
 .hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(#fff0f6,#ffffff);
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#ffe1ed,#fff5fa);
 }
 
 .hero h1{
-    font-size:48px;
-    color:#c2185b;
-    margin-bottom:15px;
+  font-size:42px;
+  color:#b72f68;
+  margin-bottom:12px;
 }
 
 .hero p{
-    font-size:18px;
-    margin-bottom:25px;
+  font-size:18px;
+  margin-bottom:25px;
 }
 
 .hero-btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:#c2185b;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
+  display:inline-block;
+  padding:13px 24px;
+  background:#c43d76;
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:bold;
 }
 
-/* SECTIONS */
-
 section{
-    padding:60px 7%;
+  padding:55px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-title h2{
-    font-size:32px;
-    color:#c2185b;
-    margin-bottom:10px;
+  text-align:center;
+  font-size:30px;
+  color:#b72f68;
+  margin-bottom:30px;
 }
 
 /* COLLECTIONS */
 
 .collections{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .collection-link{
-    text-decoration:none;
-    color:inherit;
+  text-decoration:none;
+  color:inherit;
 }
 
 .collection{
-    background:white;
-    padding:30px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 5px 20px #eadde3;
-    transition:0.3s;
-    cursor:pointer;
+  background:white;
+  padding:30px 20px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
 .collection:hover{
-    transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
 .collection h3{
-    color:#c2185b;
-    margin-bottom:10px;
+  color:#c43d76;
+  margin-bottom:10px;
 }
 
 /* PRODUCTS */
 
 .products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 .product{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px #eadde3;
-    transition:0.3s;
-    cursor:pointer;
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  cursor:pointer;
+  transition:.3s;
 }
 
 .product:hover{
-    transform:translateY(-5px);
+  transform:translateY(-5px);
 }
 
 .product img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    display:block;
+  width:100%;
+  height:250px;
+  object-fit:cover;
 }
 
 .product-info{
-    padding:20px;
+  padding:15px;
+  text-align:center;
 }
 
 .product-info h3{
-    color:#c2185b;
-    margin-bottom:8px;
+  margin-bottom:8px;
 }
 
 .price{
-    font-size:22px;
-    font-weight:bold;
-    margin:10px 0;
+  color:#c43d76;
+  font-size:20px;
+  font-weight:bold;
 }
 
-.product-info p{
-    margin-bottom:15px;
+.view-btn{
+  display:inline-block;
+  margin-top:12px;
+  background:#c43d76;
+  color:white;
+  padding:9px 18px;
+  border-radius:20px;
 }
 
-.order-btn{
-    display:inline-block;
-    padding:11px 20px;
-    background:#c2185b;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-}
-
-/* ABOUT */
-
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    line-height:1.7;
-}
-
-/* WHY */
-
-.why{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    text-align:center;
-}
-
-.why-box{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px #eadde3;
-}
-
-.why-box h3{
-    color:#c2185b;
-    margin-bottom:10px;
-}
-
-/* UPI */
-
-.upi{
-    text-align:center;
-    background:#fff0f6;
-    border-radius:20px;
-    padding:30px;
-}
-
-.upi-id{
-    font-size:20px;
-    font-weight:bold;
-    margin:15px;
-}
-
-/* INSTAGRAM */
-
-.instagram{
-    text-align:center;
-}
-
-.instagram a{
-    display:inline-block;
-    margin-top:15px;
-    padding:13px 25px;
-    background:#c2185b;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    background:#c2185b;
-    color:white;
-    padding:25px;
-}
-
-/* POPUP */
+/* PRODUCT POPUP */
 
 .popup{
-    display:none;
-    position:fixed;
-    z-index:1000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.75);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  justify-content:center;
+  align-items:center;
+  z-index:200;
+  padding:20px;
 }
 
 .popup-content{
-    background:white;
-    width:100%;
-    max-width:500px;
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    position:relative;
-    max-height:90vh;
-    overflow:auto;
+  background:white;
+  width:100%;
+  max-width:420px;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
 }
 
 .popup-content img{
-    width:100%;
-    max-height:450px;
-    object-fit:contain;
-    border-radius:15px;
-}
-
-.popup-content h2{
-    color:#c2185b;
-    margin:15px 0 8px;
-}
-
-.popup-price{
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:15px;
+  width:100%;
+  max-height:330px;
+  object-fit:contain;
+  border-radius:15px;
 }
 
 .close{
-    position:absolute;
-    right:15px;
-    top:8px;
+  position:absolute;
+  right:15px;
+  top:8px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.popup-price{
+  font-size:22px;
+  font-weight:bold;
+  color:#c43d76;
+  margin:10px;
+}
+
+.order-btn{
+  margin-top:15px;
+  padding:12px 25px;
+  border:none;
+  background:#c43d76;
+  color:white;
+  border-radius:25px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ORDER FORM */
+
+.order-form{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  justify-content:center;
+  align-items:center;
+  z-index:300;
+  padding:20px;
+}
+
+.order-box{
+  background:white;
+  width:100%;
+  max-width:450px;
+  padding:25px;
+  border-radius:20px;
+  max-height:90vh;
+  overflow-y:auto;
+}
+
+.order-box h2{
+  text-align:center;
+  color:#b72f68;
+  margin-bottom:20px;
+}
+
+.order-box label{
+  display:block;
+  margin-top:12px;
+  margin-bottom:5px;
+  font-weight:bold;
+}
+
+.order-box input,
+.order-box textarea,
+.order-box select{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.order-box textarea{
+  min-height:80px;
+}
+
+.place-order{
+  width:100%;
+  margin-top:20px;
+  padding:13px;
+  border:none;
+  border-radius:25px;
+  background:#c43d76;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.cancel-order{
+  width:100%;
+  margin-top:10px;
+  padding:11px;
+  border:1px solid #c43d76;
+  border-radius:25px;
+  background:white;
+  color:#c43d76;
+  cursor:pointer;
+}
+
+.success{
+  display:none;
+  text-align:center;
+  padding:25px 10px;
+}
+
+.success h2{
+  color:#c43d76;
+  margin-bottom:12px;
+}
+
+.success button{
+  margin-top:20px;
+  padding:11px 25px;
+  border:none;
+  border-radius:20px;
+  background:#c43d76;
+  color:white;
+  cursor:pointer;
+}
+
+footer{
+  background:#4a2638;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer p{
+  margin:8px;
+}
+
+@media(max-width:700px){
+
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  nav a{
+    margin:5px;
+    font-size:14px;
+  }
+
+  .hero h1{
     font-size:32px;
-    cursor:pointer;
+  }
+
+  .collections,
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .product img{
+    height:280px;
+  }
 }
-
-.popup-order{
-    display:inline-block;
-    margin-top:10px;
-    padding:13px 28px;
-    background:#c2185b;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    nav a{
-        margin:0 7px;
-    }
-
-    .hero h1{
-        font-size:35px;
-    }
-
-    .collections,
-    .products,
-    .why{
-        grid-template-columns:1fr;
-    }
-
-    .product img{
-        height:320px;
-    }
-}
-
 </style>
 </head>
 
@@ -359,624 +366,554 @@ footer{
 
 <nav>
 
-    <div class="logo">
-        Handmade by Kavya
-    </div>
+  <div class="logo">
+    Handmade by Kavya 💖
+  </div>
 
-    <div>
-        <a href="#home">Home</a>
-        <a href="#collections">Collections</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#bangles">Bangles</a>
+  </div>
 
 </nav>
 
 
 <!-- HOME -->
 
-<section class="hero" id="home">
+<div class="hero" id="home">
 
-    <div>
+  <h1>Handmade by Kavya</h1>
 
-        <h1>Handmade by Kavya</h1>
+  <p>
+    Beautiful handmade bangles made with love ✨
+  </p>
 
-        <p>
-            Beautiful handmade bangles, earrings & hair accessories
-        </p>
+  <a href="#collections" class="hero-btn">
+    Shop Now 💕
+  </a>
 
-        <a class="hero-btn" href="#collections">
-            Explore Collection
-        </a>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- OUR COLLECTIONS -->
+<!-- COLLECTIONS -->
 
 <section id="collections">
 
-    <div class="section-title">
+  <h2 class="section-title">
+    Our Collections
+  </h2>
 
-        <h2>Our Collections</h2>
+  <div class="collections">
 
-        <p>Choose your favourite collection ❤️</p>
+    <a href="#bangles" class="collection-link">
+
+      <div class="collection">
+
+        <h3>💖 Bangles</h3>
+
+        <p>
+          Beautiful handmade bangles for every occasion.
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <div class="collection">
+
+      <h3>✨ Earrings</h3>
+
+      <p>
+        Coming Soon 💕
+      </p>
+
+    </div>
+
+
+    <div class="collection">
+
+      <h3>🌸 Hair Accessories</h3>
+
+      <p>
+        Coming Soon 💕
+      </p>
 
     </div>
 
-
-    <div class="collections">
-
-
-        <!-- BANGLES COLLECTION -->
-
-        <a href="#bangles" class="collection-link">
-
-            <div class="collection">
-
-                <h3>💖 Bangles</h3>
-
-                <p>
-                    Beautiful handmade bangles for every occasion.
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <!-- EARRINGS COLLECTION -->
-
-        <a href="#earrings" class="collection-link">
-
-            <div class="collection">
-
-                <h3>✨ Earrings</h3>
-
-                <p>
-                    Trendy and beautiful handmade earrings.
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <!-- HAIR COLLECTION -->
-
-        <a href="#hair" class="collection-link">
-
-            <div class="collection">
-
-                <h3>🌸 Hair Accessories</h3>
-
-                <p>
-                    Cute handmade accessories for your hair.
-                </p>
-
-            </div>
-
-        </a>
-
-    </div>
+  </div>
 
 </section>
 
 
-<!-- BANGLES COLLECTION -->
+<!-- BANGLES -->
 
 <section id="bangles">
 
-    <div class="section-title">
+  <h2 class="section-title">
+    💖 Bangles
+  </h2>
 
-        <h2>💖 Bangles Collection</h2>
+  <div class="products">
 
-        <p>Tap a bangle to view details</p>
+
+    <!-- BANGLE 1 -->
+
+    <div class="product"
+      onclick="openProduct(
+      'bangle1.jpg.jpeg',
+      'Bangle 1',
+      '₹299'
+      )">
+
+      <img
+        src="bangle1.jpg.jpeg"
+        alt="Bangle 1"
+      >
+
+      <div class="product-info">
+
+        <h3>Bangle 1</h3>
+
+        <div class="price">
+          ₹299
+        </div>
+
+        <div class="view-btn">
+          View Details
+        </div>
+
+      </div>
 
     </div>
 
 
-    <div class="products">
+    <!-- BANGLE 2 -->
 
+    <div class="product"
+      onclick="openProduct(
+      'bangle2.jpeg',
+      'Bangle 2',
+      '₹349'
+      )">
 
-        <!-- BANGLE 1 -->
+      <img
+        src="bangle2.jpeg"
+        alt="Bangle 2"
+      >
 
-        <div class="product"
-        onclick="openProduct(
-        'bangle1.jpg.jpeg',
-        'Bangle 1',
-        '₹299'
-        )">
+      <div class="product-info">
 
-            <img src="bangle1.jpg.jpeg"
-            alt="Bangle 1">
+        <h3>Bangle 2</h3>
 
-            <div class="product-info">
-
-                <h3>Bangle 1</h3>
-
-                <div class="price">
-                    ₹299
-                </div>
-
-                <p>
-                    Beautiful handmade bangle.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
+        <div class="price">
+          ₹349
         </div>
 
-
-        <!-- BANGLE 2 -->
-
-        <div class="product"
-        onclick="openProduct(
-        'bangle2.jpeg',
-        'Bangle 2',
-        '₹349'
-        )">
-
-            <img src="bangle2.jpeg"
-            alt="Bangle 2">
-
-            <div class="product-info">
-
-                <h3>Bangle 2</h3>
-
-                <div class="price">
-                    ₹349
-                </div>
-
-                <p>
-                    Beautiful handmade bangle.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
+        <div class="view-btn">
+          View Details
         </div>
 
-
-        <!-- BANGLE 3 -->
-
-        <div class="product"
-        onclick="openProduct(
-        'bangle3.jpeg',
-        'Bangle 3',
-        '₹399'
-        )">
-
-            <img src="bangle3.jpeg"
-            alt="Bangle 3">
-
-            <div class="product-info">
-
-                <h3>Bangle 3</h3>
-
-                <div class="price">
-                    ₹399
-                </div>
-
-                <p>
-                    Beautiful handmade bangle.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- BANGLE 4 -->
-
-        <div class="product"
-        onclick="openProduct(
-        'bangle4.jpeg',
-        'Bangle 4',
-        '₹449'
-        )">
-
-            <img src="bangle4.jpeg"
-            alt="Bangle 4">
-
-            <div class="product-info">
-
-                <h3>Bangle 4</h3>
-
-                <div class="price">
-                    ₹449
-                </div>
-
-                <p>
-                    Beautiful handmade bangle.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- BANGLE 5 -->
-
-        <div class="product"
-        onclick="openProduct(
-        'bangle5.jpeg',
-        'Bangle 5',
-        '₹499'
-        )">
-
-            <img src="bangle5.jpeg"
-            alt="Bangle 5">
-
-            <div class="product-info">
-
-                <h3>Bangle 5</h3>
-
-                <div class="price">
-                    ₹499
-                </div>
-
-                <p>
-                    Beautiful handmade bangle.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
-        </div>
-
+      </div>
 
     </div>
+
+
+    <!-- BANGLE 3 -->
+
+    <div class="product"
+      onclick="openProduct(
+      'bangle3.jpeg',
+      'Bangle 3',
+      '₹399'
+      )">
+
+      <img
+        src="bangle3.jpeg"
+        alt="Bangle 3"
+      >
+
+      <div class="product-info">
+
+        <h3>Bangle 3</h3>
+
+        <div class="price">
+          ₹399
+        </div>
+
+        <div class="view-btn">
+          View Details
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BANGLE 4 -->
+
+    <div class="product"
+      onclick="openProduct(
+      'bangle4.jpeg',
+      'Bangle 4',
+      '₹449'
+      )">
+
+      <img
+        src="bangle4.jpeg"
+        alt="Bangle 4"
+      >
+
+      <div class="product-info">
+
+        <h3>Bangle 4</h3>
+
+        <div class="price">
+          ₹449
+        </div>
+
+        <div class="view-btn">
+          View Details
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BANGLE 5 -->
+
+    <div class="product"
+      onclick="openProduct(
+      'bangle5.jpeg',
+      'Bangle 5',
+      '₹499'
+      )">
+
+      <img
+        src="bangle5.jpeg"
+        alt="Bangle 5"
+      >
+
+      <div class="product-info">
+
+        <h3>Bangle 5</h3>
+
+        <div class="price">
+          ₹499
+        </div>
+
+        <div class="view-btn">
+          View Details
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- EARRINGS COLLECTION -->
+<!-- PRODUCT DETAILS -->
 
-<section id="earrings">
+<div id="productPopup" class="popup">
 
-    <div class="section-title">
+  <div class="popup-content">
 
-        <h2>✨ Earrings Collection</h2>
+    <span class="close"
+      onclick="closeProduct()">
+      &times;
+    </span>
 
-        <p>Beautiful handmade earrings</p>
+    <img id="popupImage" src="" alt="Product">
+
+    <h2 id="popupName">
+      Product
+    </h2>
+
+    <div id="popupPrice" class="popup-price">
+      ₹0
+    </div>
+
+    <p>
+      Handmade with love by Handmade by Kavya 💕
+    </p>
+
+    <button
+      class="order-btn"
+      onclick="openOrderForm()">
+
+      Order Now 🛍️
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ORDER FORM -->
+
+<div id="orderForm" class="order-form">
+
+  <div class="order-box">
+
+    <div id="orderContent">
+
+      <h2>
+        Place Your Order 🛍️
+      </h2>
+
+      <label>
+        Product
+      </label>
+
+      <input
+        id="orderProduct"
+        type="text"
+        readonly
+      >
+
+
+      <label>
+        Price
+      </label>
+
+      <input
+        id="orderPrice"
+        type="text"
+        readonly
+      >
+
+
+      <label>
+        Your Name
+      </label>
+
+      <input
+        id="customerName"
+        type="text"
+        placeholder="Enter your name"
+      >
+
+
+      <label>
+        Mobile Number
+      </label>
+
+      <input
+        id="customerPhone"
+        type="tel"
+        placeholder="Enter mobile number"
+      >
+
+
+      <label>
+        Delivery Address
+      </label>
+
+      <textarea
+        id="customerAddress"
+        placeholder="Enter complete delivery address">
+      </textarea>
+
+
+      <label>
+        Quantity
+      </label>
+
+      <select id="quantity">
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+
+      <label>
+        Payment Method
+      </label>
+
+      <select id="payment">
+
+        <option>
+          Cash on Delivery
+        </option>
+
+        <option>
+          UPI
+        </option>
+
+      </select>
+
+
+      <button
+        class="place-order"
+        onclick="placeOrder()">
+
+        Place Order ✅
+
+      </button>
+
+
+      <button
+        class="cancel-order"
+        onclick="closeOrderForm()">
+
+        Cancel
+
+      </button>
 
     </div>
 
 
-    <div class="products">
+    <!-- SUCCESS -->
 
-        <div class="product"
-        onclick="openProduct(
-        'earrings1.jpg',
-        'Designer Earrings',
-        '₹249'
-        )">
+    <div id="successMessage" class="success">
 
-            <img
-            src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80"
-            alt="Designer Earrings">
+      <h2>
+        🎉 Order Submitted!
+      </h2>
 
-            <div class="product-info">
+      <p>
+        Thank you for ordering from
+        <b>Handmade by Kavya</b> 💖
+      </p>
 
-                <h3>Designer Earrings</h3>
+      <p>
+        Your order details have been entered successfully.
+      </p>
 
-                <div class="price">
-                    ₹249
-                </div>
-
-                <p>
-                    Stylish handmade earrings.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
-        </div>
+      <button onclick="closeOrderForm()">
+        Continue Shopping
+      </button>
 
     </div>
 
-</section>
+  </div>
 
-
-<!-- HAIR ACCESSORIES COLLECTION -->
-
-<section id="hair">
-
-    <div class="section-title">
-
-        <h2>🌸 Hair Accessories Collection</h2>
-
-        <p>Cute handmade hair accessories</p>
-
-    </div>
-
-
-    <div class="products">
-
-        <div class="product"
-        onclick="openProduct(
-        'hair1.jpg',
-        'Hair Accessories',
-        '₹199'
-        )">
-
-            <img
-            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
-            alt="Hair Accessories">
-
-            <div class="product-info">
-
-                <h3>Hair Accessories</h3>
-
-                <div class="price">
-                    ₹199
-                </div>
-
-                <p>
-                    Cute handmade hair accessories.
-                </p>
-
-                <span class="order-btn">
-                    View Details
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <div class="section-title">
-
-        <h2>About Us</h2>
-
-    </div>
-
-    <div class="about">
-
-        <p>
-            Welcome to Handmade by Kavya ❤️
-        </p>
-
-        <p>
-            We create beautiful handmade bangles,
-            earrings and hair accessories with creativity,
-            care and love.
-        </p>
-
-        <br>
-
-        <p>
-            Perfect for festivals, weddings, parties,
-            gifts and everyday fashion.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- WHY CHOOSE US -->
-
-<section>
-
-    <div class="section-title">
-
-        <h2>Why Choose Us?</h2>
-
-    </div>
-
-
-    <div class="why">
-
-        <div class="why-box">
-
-            <h3>❤️ Handmade</h3>
-
-            <p>
-                Each product is carefully handmade.
-            </p>
-
-        </div>
-
-
-        <div class="why-box">
-
-            <h3>✨ Unique Designs</h3>
-
-            <p>
-                Beautiful designs for special occasions.
-            </p>
-
-        </div>
-
-
-        <div class="why-box">
-
-            <h3>🎁 Custom Orders</h3>
-
-            <p>
-                Custom designs are available.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- UPI PAYMENT -->
-
-<section>
-
-    <div class="upi">
-
-        <div class="section-title">
-
-            <h2>UPI Payment</h2>
-
-            <p>
-                Pay easily using UPI
-            </p>
-
-        </div>
-
-        <div class="upi-id">
-            UPI ID: badakala.k@ptaxis
-        </div>
-
-        <a class="hero-btn"
-        href="upi://pay?pa=badakala.k@ptaxis&pn=Handmade%20by%20Kavya">
-            Pay with UPI
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-    <div class="instagram">
-
-        <div class="section-title">
-
-            <h2>Follow Us on Instagram</h2>
-
-            <p>
-                See our latest handmade creations ❤️
-            </p>
-
-        </div>
-
-        <a
-        href="https://www.instagram.com/handmade.by_kavya/"
-        target="_blank">
-            Visit Instagram
-        </a>
-
-    </div>
-
-</section>
+</div>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-    <p>
-        © 2026 Handmade by Kavya
-    </p>
+  <h3>
+    Handmade by Kavya 💖
+  </h3>
 
-    <p>
-        Handmade with ❤️
-    </p>
+  <p>
+    Handmade with love ✨
+  </p>
+
+  <p>
+    Bangles • Earrings • Hair Accessories
+  </p>
+
+  <p>
+    UPI ID: badakala.k@ptaxis
+  </p>
 
 </footer>
 
 
-<!-- PRODUCT POPUP -->
-
-<div id="productPopup"
-class="popup"
-onclick="closeProduct(event)">
-
-    <div class="popup-content">
-
-        <span class="close"
-        onclick="closeProduct(event)">
-            &times;
-        </span>
-
-        <img id="popupImage"
-        src=""
-        alt="Product">
-
-        <h2 id="popupName">
-            Product
-        </h2>
-
-        <div id="popupPrice"
-        class="popup-price">
-            ₹299
-        </div>
-
-        <p>
-            Beautiful handmade product crafted
-            with love by Handmade by Kavya.
-        </p>
-
-        <a
-        class="popup-order"
-        href="https://www.instagram.com/handmade.by_kavya/"
-        target="_blank">
-            Order Now
-        </a>
-
-    </div>
-
-</div>
-
-
 <script>
 
-function openProduct(image, name, price){
+let selectedProduct = "";
+let selectedPrice = "";
 
-    document.getElementById("popupImage").src = image;
 
-    document.getElementById("popupName").innerText = name;
+/* OPEN PRODUCT */
 
-    document.getElementById("popupPrice").innerText = price;
+function openProduct(image,name,price){
 
-    document.getElementById("productPopup").style.display = "flex";
+  selectedProduct = name;
+
+  selectedPrice = price;
+
+  document.getElementById("popupImage").src = image;
+
+  document.getElementById("popupName").innerText = name;
+
+  document.getElementById("popupPrice").innerText = price;
+
+  document.getElementById("productPopup").style.display = "flex";
 
 }
 
 
-function closeProduct(event){
+/* CLOSE PRODUCT */
 
-    if(
-        event.target.id === "productPopup" ||
-        event.target.classList.contains("close")
-    ){
+function closeProduct(){
 
-        document.getElementById("productPopup").style.display = "none";
+  document.getElementById("productPopup").style.display = "none";
 
-    }
+}
+
+
+/* OPEN ORDER FORM */
+
+function openOrderForm(){
+
+  document.getElementById("productPopup").style.display = "none";
+
+  document.getElementById("orderForm").style.display = "flex";
+
+  document.getElementById("orderProduct").value =
+    selectedProduct;
+
+  document.getElementById("orderPrice").value =
+    selectedPrice;
+
+}
+
+
+/* CLOSE ORDER FORM */
+
+function closeOrderForm(){
+
+  document.getElementById("orderForm").style.display = "none";
+
+  document.getElementById("orderContent").style.display = "block";
+
+  document.getElementById("successMessage").style.display = "none";
+
+}
+
+
+/* PLACE ORDER */
+
+function placeOrder(){
+
+  let name =
+    document.getElementById("customerName").value.trim();
+
+  let phone =
+    document.getElementById("customerPhone").value.trim();
+
+  let address =
+    document.getElementById("customerAddress").value.trim();
+
+
+  if(name === "" || phone === "" || address === ""){
+
+    alert("Please fill all required details.");
+
+    return;
+
+  }
+
+
+  document.getElementById("orderContent").style.display = "none";
+
+  document.getElementById("successMessage").style.display = "block";
 
 }
 
