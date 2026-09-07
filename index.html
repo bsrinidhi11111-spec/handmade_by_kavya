@@ -7,149 +7,416 @@
 <title>Handmade by Kavya</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fff8fb;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf8;
+    color: #3b2930;
 }
 
-header {
-    background: linear-gradient(135deg, #d63384, #ff7eb3);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
-
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-}
+/* NAVIGATION */
 
 nav {
-    background: white;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
+    z-index: 1000;
+    background: rgba(255,250,248,0.97);
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(80,40,50,0.08);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: #a64d70;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
     text-decoration: none;
-    color: #d63384;
-    margin: 0 12px;
-    font-weight: bold;
+    color: #5a3b45;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-section {
-    padding: 45px 20px;
+nav a:hover {
+    color: #b45b7c;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(rgba(70,25,45,0.32), rgba(70,25,45,0.32)),
+        url("https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+
+    color: white;
 }
 
-section h2 {
-    color: #d63384;
-    font-size: 30px;
+.hero-content {
+    max-width: 750px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 0.9;
     margin-bottom: 25px;
 }
 
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.hero p {
+    font-size: 17px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: white;
+    color: #9d4568;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: #b45b7c;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.section-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    margin-top: 8px;
+}
+
+/* COLLECTIONS */
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.card {
-    background: white;
-    width: 280px;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-    transition: transform 0.3s;
+.collection-card {
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(70,30,45,0.12);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
+.collection-card img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    transition: 0.6s;
 }
 
-.card h3 {
-    color: #d63384;
-    margin: 15px 0 8px;
+.collection-card:hover img {
+    transform: scale(1.08);
 }
 
-.card p {
-    color: #666;
+.collection-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 35px 20px 25px;
+    color: white;
+    background: linear-gradient(transparent, rgba(40,15,25,0.85));
 }
+
+.collection-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(60,30,40,0.08);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+}
+
+.price {
+    color: #a64d70;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.order-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #b45b7c;
+    border-radius: 25px;
+    color: #a64d70;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.order-btn:hover {
+    background: #a64d70;
+    color: white;
+}
+
+/* ABOUT */
 
 .about {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 17px;
+    background: #f8e9ee;
+    text-align: center;
 }
 
-.button {
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about p {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.feature {
+    padding: 30px;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+/* PAYMENT */
+
+.payment {
+    background: #fff0f4;
+    text-align: center;
+}
+
+.upi-box {
+    max-width: 430px;
+    margin: auto;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(60,30,40,0.10);
+}
+
+.upi-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.upi-id {
+    font-size: 21px;
+    font-weight: 600;
+    color: #a64d70;
+    margin: 15px 0;
+    word-break: break-word;
+}
+
+.upi-button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 13px 25px;
-    background: #d63384;
+    margin-top: 10px;
+    padding: 14px 28px;
+    background: #a64d70;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
-.button:hover {
-    background: #ad2168;
+.upi-button:hover {
+    background: #863653;
 }
+
+/* INSTAGRAM */
+
+.instagram {
+    text-align: center;
+    background: #fffaf8;
+}
+
+.instagram-button {
+    display: inline-block;
+    margin-top: 25px;
+    background: #a64d70;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+/* FOOTER */
 
 footer {
-    background: #d63384;
+    background: #3b2930;
     color: white;
     text-align: center;
-    padding: 25px;
-    margin-top: 20px;
+    padding: 45px 20px;
 }
 
-.social {
-    margin-top: 15px;
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
-.social a {
-    color: white;
+.footer-instagram {
+    color: #f3b4c9;
     text-decoration: none;
-    font-weight: bold;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
+footer p {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 13px 5%;
     }
 
-    nav a {
-        margin: 0 6px;
-        font-size: 14px;
+    .logo {
+        font-size: 23px;
     }
 
-    .card {
-        width: 90%;
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .collection,
+    .products,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .collection-card {
+        height: 380px;
     }
 }
 </style>
@@ -157,93 +424,449 @@ footer {
 
 <body>
 
-<header>
-    <h1>✨ Handmade by Kavya ✨</h1>
-    <p>Beautiful Handmade Accessories Made With Love</p>
-</header>
+
+<!-- NAVIGATION -->
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#collection">Collection</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+
+    <div class="logo">
+        Handmade by Kavya
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#payment">UPI</a></li>
+    </ul>
+
 </nav>
 
-<section id="home">
-    <h2>Welcome 💕</h2>
-    <p>
-        Discover beautiful handmade bangles, earrings and hair accessories
-        created with love and creativity.
-    </p>
 
-    <a class="button" href="#collection">Explore Collection</a>
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ✦ Handmade With Love ✦
+        </div>
+
+        <h1>
+            Handmade<br>by Kavya
+        </h1>
+
+        <p>
+            Discover beautiful handmade bangles, earrings and
+            hair accessories created specially for you.
+        </p>
+
+        <a href="#shop" class="hero-button">
+            Explore Collection →
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- COLLECTIONS -->
+
+<section id="collections">
+
+    <div class="section-title">
+
+        <span>Shop By Category</span>
+
+        <h2>Our Collections</h2>
+
+    </div>
+
+
+    <div class="collection">
+
+        <div class="collection-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80"
+            alt="Handmade Bangles">
+
+            <div class="collection-info">
+
+                <h3>Bangles</h3>
+
+                <p>Elegant handmade designs</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="collection-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
+            alt="Handmade Earrings">
+
+            <div class="collection-info">
+
+                <h3>Earrings</h3>
+
+                <p>Beautiful statement pieces</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="collection-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+            alt="Hair Accessories">
+
+            <div class="collection-info">
+
+                <h3>Hair Accessories</h3>
+
+                <p>Perfect finishing touches</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="collection">
-    <h2>Our Collection 🌸</h2>
+
+<!-- PRODUCTS -->
+
+<section id="shop">
+
+    <div class="section-title">
+
+        <span>Handpicked For You</span>
+
+        <h2>Featured Collection</h2>
+
+    </div>
+
 
     <div class="products">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
-                 alt="Handmade Bangles">
-            <h3>Handmade Bangles</h3>
-            <p>Beautiful bangles for every occasion.</p>
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
+            alt="Traditional Bangles">
+
+            <div class="product-info">
+
+                <h3>Traditional Bangles</h3>
+
+                <div class="price">
+                    ₹299
+                </div>
+
+                <p>
+                    Beautiful handmade bangle set.
+                </p>
+
+                <a
+                class="order-btn"
+                href="https://www.instagram.com/handmade.by_kavya/"
+                target="_blank">
+                    Order Now
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
-                 alt="Earrings">
-            <h3>Designer Earrings</h3>
-            <p>Elegant earrings for traditional and modern looks.</p>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=700&q=80"
+            alt="Designer Earrings">
+
+            <div class="product-info">
+
+                <h3>Designer Earrings</h3>
+
+                <div class="price">
+                    ₹249
+                </div>
+
+                <p>
+                    Elegant earrings for every occasion.
+                </p>
+
+                <a
+                class="order-btn"
+                href="https://www.instagram.com/handmade.by_kavya/"
+                target="_blank">
+                    Order Now
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
-                 alt="Hair Accessories">
-            <h3>Hair Accessories</h3>
-            <p>Lovely accessories to complete your look.</p>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+            alt="Hair Accessories">
+
+            <div class="product-info">
+
+                <h3>Hair Accessories</h3>
+
+                <div class="price">
+                    ₹199
+                </div>
+
+                <p>
+                    Pretty accessories for your hairstyle.
+                </p>
+
+                <a
+                class="order-btn"
+                href="https://www.instagram.com/handmade.by_kavya/"
+                target="_blank">
+                    Order Now
+                </a>
+
+            </div>
+
         </div>
 
     </div>
+
 </section>
 
-<section id="about">
-    <h2>About Us 💖</h2>
 
-    <div class="about">
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <span>Our Story</span>
+
+        <h2>Made With Love</h2>
+
+    </div>
+
+
+    <div class="about-content">
+
         <p>
-            Welcome to Handmade by Kavya!
-            We create unique handmade bangles, earrings and hair accessories.
-            Every piece is made with creativity, care and attention to detail.
-            Our products are perfect for festivals, weddings, parties,
-            gifts and everyday style.
+
+            Handmade by Kavya is a creative handmade accessories brand.
+            Every piece is carefully designed to bring beauty and elegance
+            to your special moments.
+
+            From colourful bangles to beautiful earrings and charming
+            hair accessories, our collection is made with creativity,
+            care and love.
+
         </p>
+
     </div>
+
 </section>
 
-<section id="contact">
-    <h2>Contact Us 📩</h2>
 
-    <p>For orders and custom designs, contact us on Instagram.</p>
+<!-- WHY CHOOSE US -->
 
-    <a class="button"
-       href="https://www.instagram.com/handmade.by_kavya/"
-       target="_blank">
-       📷 Visit Our Instagram
+<section>
+
+    <div class="section-title">
+
+        <span>Why Choose Us</span>
+
+        <h2>Little Things That Matter</h2>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ✨
+            </div>
+
+            <h3>Handmade</h3>
+
+            <p>
+                Every piece is created with care
+                and attention to detail.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💖
+            </div>
+
+            <h3>Made With Love</h3>
+
+            <p>
+                Unique designs created specially
+                for accessory lovers.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎁
+            </div>
+
+            <h3>Perfect Gifts</h3>
+
+            <p>
+                Beautiful choices for birthdays,
+                festivals and special days.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- UPI PAYMENT -->
+
+<section class="payment" id="payment">
+
+    <div class="section-title">
+
+        <span>Easy Payment</span>
+
+        <h2>Pay With UPI 💳</h2>
+
+    </div>
+
+
+    <div class="upi-box">
+
+        <div class="upi-icon">
+            📱
+        </div>
+
+        <h3>
+            Handmade by Kavya
+        </h3>
+
+        <p>
+            Use the UPI ID below for your order payment.
+        </p>
+
+        <div class="upi-id">
+            badakala.k@ptaxis
+        </div>
+
+
+        <a
+        class="upi-button"
+        href="upi://pay?pa=badakala.k@ptaxis&pn=Handmade%20by%20Kavya"
+        >
+            Pay via UPI
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+    <div class="section-title">
+
+        <span>Follow Our Journey</span>
+
+        <h2>See More on Instagram</h2>
+
+    </div>
+
+
+    <p>
+        Follow Handmade by Kavya for new designs,
+        collections and custom orders.
+    </p>
+
+
+    <a
+    class="instagram-button"
+    href="https://www.instagram.com/handmade.by_kavya/"
+    target="_blank">
+
+        📷 @handmade.by_kavya
+
     </a>
+
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
-    <p>© 2026 Handmade by Kavya</p>
 
-    <div class="social">
-        <a href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">
-           Instagram: @handmade.by_kavya
+    <h2>
+        Handmade by Kavya
+    </h2>
+
+    <p>
+        Beautiful handmade accessories, made with love.
+    </p>
+
+
+    <p>
+
+        <a
+        class="footer-instagram"
+        href="https://www.instagram.com/handmade.by_kavya/"
+        target="_blank">
+
+            Instagram: @handmade.by_kavya
+
         </a>
-    </div>
+
+    </p>
+
+
+    <p>
+        © 2026 Handmade by Kavya. All rights reserved.
+    </p>
+
 </footer>
 
+
 </body>
-</html>index.html
+</html>
