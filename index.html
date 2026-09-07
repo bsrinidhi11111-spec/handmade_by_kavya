@@ -1,1 +1,249 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handmade by Kavya</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #d63384, #ff7eb3);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d63384;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+section {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #d63384;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #d63384;
+    margin: 15px 0 8px;
+}
+
+.card p {
+    color: #666;
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 25px;
+    background: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #ad2168;
+}
+
+footer {
+    background: #d63384;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>✨ Handmade by Kavya ✨</h1>
+    <p>Beautiful Handmade Accessories Made With Love</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome 💕</h2>
+    <p>
+        Discover beautiful handmade bangles, earrings and hair accessories
+        created with love and creativity.
+    </p>
+
+    <a class="button" href="#collection">Explore Collection</a>
+</section>
+
+<section id="collection">
+    <h2>Our Collection 🌸</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+                 alt="Handmade Bangles">
+            <h3>Handmade Bangles</h3>
+            <p>Beautiful bangles for every occasion.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+                 alt="Earrings">
+            <h3>Designer Earrings</h3>
+            <p>Elegant earrings for traditional and modern looks.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+                 alt="Hair Accessories">
+            <h3>Hair Accessories</h3>
+            <p>Lovely accessories to complete your look.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us 💖</h2>
+
+    <div class="about">
+        <p>
+            Welcome to Handmade by Kavya!
+            We create unique handmade bangles, earrings and hair accessories.
+            Every piece is made with creativity, care and attention to detail.
+            Our products are perfect for festivals, weddings, parties,
+            gifts and everyday style.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us 📩</h2>
+
+    <p>For orders and custom designs, contact us on Instagram.</p>
+
+    <a class="button"
+       href="https://www.instagram.com/handmade.by_kavya/"
+       target="_blank">
+       📷 Visit Our Instagram
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Handmade by Kavya</p>
+
+    <div class="social">
+        <a href="https://www.instagram.com/handmade.by_kavya/"
+           target="_blank">
+           Instagram: @handmade.by_kavya
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>index.html
