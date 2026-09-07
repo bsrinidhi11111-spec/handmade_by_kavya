@@ -7,425 +7,355 @@
 <title>Handmade by Kavya</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fffaf8;
-    color: #3b2930;
+body{
+    font-family:Arial,sans-serif;
+    background:#fff8fb;
+    color:#333;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,250,248,0.97);
-    padding: 15px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 15px rgba(80,40,50,0.08);
+nav{
+    background:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px #ddd;
 }
 
-.logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 29px;
-    font-weight: 700;
-    color: #a64d70;
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#c2185b;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #5a3b45;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #b45b7c;
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:18px;
+    font-weight:bold;
 }
 
 /* HERO */
 
-.hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
-
-    background:
-        linear-gradient(rgba(70,25,45,0.32), rgba(70,25,45,0.32)),
-        url("https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1600&q=85")
-        center/cover;
-
-    color: white;
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(#fff0f6,#ffffff);
 }
 
-.hero-content {
-    max-width: 750px;
+.hero h1{
+    font-size:48px;
+    color:#c2185b;
+    margin-bottom:15px;
 }
 
-.small-title {
-    letter-spacing: 4px;
-    font-size: 13px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
 }
 
-.hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(55px, 9vw, 100px);
-    line-height: 0.9;
-    margin-bottom: 25px;
-}
-
-.hero p {
-    font-size: 17px;
-    max-width: 600px;
-    margin: auto;
-    line-height: 1.8;
-}
-
-.hero-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 30px;
-    background: white;
-    color: #9d4568;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.hero-button:hover {
-    transform: translateY(-4px);
+.hero-btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#c2185b;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
 }
 
 /* SECTIONS */
 
-section {
-    padding: 80px 7%;
+section{
+    padding:60px 7%;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.section-title span {
-    color: #b45b7c;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.section-title h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    margin-top: 8px;
+.section-title h2{
+    font-size:32px;
+    color:#c2185b;
+    margin-bottom:10px;
 }
 
 /* COLLECTIONS */
 
-.collection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.collections{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.collection-card {
-    height: 420px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(70,30,45,0.12);
+.collection-link{
+    text-decoration:none;
+    color:inherit;
 }
 
-.collection-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.6s;
+.collection{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 5px 20px #eadde3;
+    transition:0.3s;
+    cursor:pointer;
 }
 
-.collection-card:hover img {
-    transform: scale(1.08);
+.collection:hover{
+    transform:translateY(-5px);
 }
 
-.collection-info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 35px 20px 25px;
-    color: white;
-    background: linear-gradient(transparent, rgba(40,15,25,0.85));
-}
-
-.collection-info h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
+.collection h3{
+    color:#c2185b;
+    margin-bottom:10px;
 }
 
 /* PRODUCTS */
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.product {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(60,30,40,0.08);
-    transition: 0.3s;
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #eadde3;
+    transition:0.3s;
+    cursor:pointer;
 }
 
-.product:hover {
-    transform: translateY(-8px);
+.product:hover{
+    transform:translateY(-5px);
 }
 
-.product img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.product img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
 }
 
-.product-info {
-    padding: 20px;
+.product-info{
+    padding:20px;
 }
 
-.product-info h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
+.product-info h3{
+    color:#c2185b;
+    margin-bottom:8px;
 }
 
-.price {
-    color: #a64d70;
-    font-weight: 600;
-    margin: 8px 0;
+.price{
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
 }
 
-.order-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: 1px solid #b45b7c;
-    border-radius: 25px;
-    color: #a64d70;
-    text-decoration: none;
-    font-size: 13px;
+.product-info p{
+    margin-bottom:15px;
 }
 
-.order-btn:hover {
-    background: #a64d70;
-    color: white;
+.order-btn{
+    display:inline-block;
+    padding:11px 20px;
+    background:#c2185b;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
 }
 
 /* ABOUT */
 
-.about {
-    background: #f8e9ee;
-    text-align: center;
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
 }
 
-.about-content {
-    max-width: 750px;
-    margin: auto;
+/* WHY */
+
+.why{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    text-align:center;
 }
 
-.about p {
-    line-height: 2;
-    font-size: 16px;
+.why-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #eadde3;
 }
 
-/* FEATURES */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    text-align: center;
+.why-box h3{
+    color:#c2185b;
+    margin-bottom:10px;
 }
 
-.feature {
-    padding: 30px;
+/* UPI */
+
+.upi{
+    text-align:center;
+    background:#fff0f6;
+    border-radius:20px;
+    padding:30px;
 }
 
-.feature-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.feature h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
-    margin-bottom: 8px;
-}
-
-/* PAYMENT */
-
-.payment {
-    background: #fff0f4;
-    text-align: center;
-}
-
-.upi-box {
-    max-width: 430px;
-    margin: auto;
-    padding: 30px 20px;
-    background: white;
-    border-radius: 22px;
-    box-shadow: 0 8px 30px rgba(60,30,40,0.10);
-}
-
-.upi-icon {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-.upi-id {
-    font-size: 21px;
-    font-weight: 600;
-    color: #a64d70;
-    margin: 15px 0;
-    word-break: break-word;
-}
-
-.upi-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 14px 28px;
-    background: #a64d70;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-}
-
-.upi-button:hover {
-    background: #863653;
+.upi-id{
+    font-size:20px;
+    font-weight:bold;
+    margin:15px;
 }
 
 /* INSTAGRAM */
 
-.instagram {
-    text-align: center;
-    background: #fffaf8;
+.instagram{
+    text-align:center;
 }
 
-.instagram-button {
-    display: inline-block;
-    margin-top: 25px;
-    background: #a64d70;
-    color: white;
-    text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 30px;
-    font-weight: 500;
+.instagram a{
+    display:inline-block;
+    margin-top:15px;
+    padding:13px 25px;
+    background:#c2185b;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
 }
 
 /* FOOTER */
 
-footer {
-    background: #3b2930;
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
+footer{
+    text-align:center;
+    background:#c2185b;
+    color:white;
+    padding:25px;
 }
 
-footer h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
-    margin-bottom: 10px;
+/* POPUP */
+
+.popup{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-.footer-instagram {
-    color: #f3b4c9;
-    text-decoration: none;
+.popup-content{
+    background:white;
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    position:relative;
+    max-height:90vh;
+    overflow:auto;
 }
 
-footer p {
-    margin-top: 15px;
-    font-size: 13px;
-    opacity: 0.85;
+.popup-content img{
+    width:100%;
+    max-height:450px;
+    object-fit:contain;
+    border-radius:15px;
+}
+
+.popup-content h2{
+    color:#c2185b;
+    margin:15px 0 8px;
+}
+
+.popup-price{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:8px;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.popup-order{
+    display:inline-block;
+    margin-top:10px;
+    padding:13px 28px;
+    background:#c2185b;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
 }
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media(max-width:768px){
 
-    nav {
-        padding: 13px 5%;
+    nav{
+        flex-direction:column;
+        gap:12px;
     }
 
-    .logo {
-        font-size: 23px;
+    nav a{
+        margin:0 7px;
     }
 
-    nav ul {
-        gap: 10px;
+    .hero h1{
+        font-size:35px;
     }
 
-    nav ul a {
-        font-size: 11px;
-    }
-
-    .hero {
-        min-height: 580px;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-    }
-
-    .collection,
+    .collections,
     .products,
-    .features {
-        grid-template-columns: 1fr;
+    .why{
+        grid-template-columns:1fr;
     }
 
-    section {
-        padding: 60px 5%;
-    }
-
-    .section-title h2 {
-        font-size: 40px;
-    }
-
-    .collection-card {
-        height: 380px;
+    .product img{
+        height:320px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 
 <nav>
 
@@ -433,200 +363,318 @@ footer p {
         Handmade by Kavya
     </div>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#payment">UPI</a></li>
-    </ul>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- HOME -->
 
-<header class="hero" id="home">
+<section class="hero" id="home">
 
-    <div class="hero-content">
+    <div>
 
-        <div class="small-title">
-            ✦ Handmade With Love ✦
-        </div>
-
-        <h1>
-            Handmade<br>by Kavya
-        </h1>
+        <h1>Handmade by Kavya</h1>
 
         <p>
-            Discover beautiful handmade bangles, earrings and
-            hair accessories created specially for you.
+            Beautiful handmade bangles, earrings & hair accessories
         </p>
 
-        <a href="#shop" class="hero-button">
-            Explore Collection →
+        <a class="hero-btn" href="#collections">
+            Explore Collection
         </a>
-
-    </div>
-
-</header>
-
-
-<!-- COLLECTIONS -->
-
-<section id="collections">
-
-    <div class="section-title">
-
-        <span>Shop By Category</span>
-
-        <h2>Our Collections</h2>
-
-    </div>
-
-
-    <div class="collection">
-
-        <div class="collection-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80"
-            alt="Handmade Bangles">
-
-            <div class="collection-info">
-
-                <h3>Bangles</h3>
-
-                <p>Elegant handmade designs</p>
-
-            </div>
-
-        </div>
-
-
-        <div class="collection-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
-            alt="Handmade Earrings">
-
-            <div class="collection-info">
-
-                <h3>Earrings</h3>
-
-                <p>Beautiful statement pieces</p>
-
-            </div>
-
-        </div>
-
-
-        <div class="collection-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-            alt="Hair Accessories">
-
-            <div class="collection-info">
-
-                <h3>Hair Accessories</h3>
-
-                <p>Perfect finishing touches</p>
-
-            </div>
-
-        </div>
 
     </div>
 
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- OUR COLLECTIONS -->
 
-<section id="shop">
+<section id="collections">
 
     <div class="section-title">
 
-        <span>Handpicked For You</span>
+        <h2>Our Collections</h2>
 
-        <h2>Featured Collection</h2>
+        <p>Choose your favourite collection ❤️</p>
+
+    </div>
+
+
+    <div class="collections">
+
+
+        <!-- BANGLES COLLECTION -->
+
+        <a href="#bangles" class="collection-link">
+
+            <div class="collection">
+
+                <h3>💖 Bangles</h3>
+
+                <p>
+                    Beautiful handmade bangles for every occasion.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- EARRINGS COLLECTION -->
+
+        <a href="#earrings" class="collection-link">
+
+            <div class="collection">
+
+                <h3>✨ Earrings</h3>
+
+                <p>
+                    Trendy and beautiful handmade earrings.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- HAIR COLLECTION -->
+
+        <a href="#hair" class="collection-link">
+
+            <div class="collection">
+
+                <h3>🌸 Hair Accessories</h3>
+
+                <p>
+                    Cute handmade accessories for your hair.
+                </p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BANGLES COLLECTION -->
+
+<section id="bangles">
+
+    <div class="section-title">
+
+        <h2>💖 Bangles Collection</h2>
+
+        <p>Tap a bangle to view details</p>
 
     </div>
 
 
     <div class="products">
-         <!-- product 1 -->
+
+
         <!-- BANGLE 1 -->
-<div class="product">
-    <img src="bangle1.jpg.jpeg" alt="Handmade Bangle 1">
-    <div class="product-info">
-        <h3>Bangle 1</h3>
-        <div class="price">₹299</div>
-        <p>Beautiful handmade bangle.</p>
-        <a class="order-btn"
-           href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">Order Now</a>
-    </div>
-</div>
 
-<!-- BANGLE 2 -->
-<div class="product">
-    <img src="bangle2.jpeg" alt="Handmade Bangle 2">
-    <div class="product-info">
-        <h3>Bangle 2</h3>
-        <div class="price">₹349</div>
-        <p>Beautiful handmade bangle.</p>
-        <a class="order-btn"
-           href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">Order Now</a>
-    </div>
-</div>
+        <div class="product"
+        onclick="openProduct(
+        'bangle1.jpg.jpeg',
+        'Bangle 1',
+        '₹299'
+        )">
 
-<!-- BANGLE 3 -->
-<div class="product">
-    <img src="bangle3.jpeg" alt="Handmade Bangle 3">
-    <div class="product-info">
-        <h3>Bangle 3</h3>
-        <div class="price">₹399</div>
-        <p>Beautiful handmade bangle.</p>
-        <a class="order-btn"
-           href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">Order Now</a>
-    </div>
-</div>
+            <img src="bangle1.jpg.jpeg"
+            alt="Bangle 1">
 
-<!-- BANGLE 4 -->
-<div class="product">
-    <img src="bangle4.jpeg" alt="Handmade Bangle 4">
-    <div class="product-info">
-        <h3>Bangle 4</h3>
-        <div class="price">₹449</div>
-        <p>Beautiful handmade bangle.</p>
-        <a class="order-btn"
-           href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">Order Now</a>
-    </div>
-</div>
+            <div class="product-info">
 
-<!-- BANGLE 5 -->
-<div class="product">
-    <img src="bangle5.jpeg" alt="Handmade Bangle 5">
-    <div class="product-info">
-        <h3>Bangle 5</h3>
-        <div class="price">₹499</div>
-        <p>Beautiful handmade bangle.</p>
-        <a class="order-btn"
-           href="https://www.instagram.com/handmade.by_kavya/"
-           target="_blank">Order Now</a>
-    </div>
-</div>
-        <!-- PRODUCT 2 -->
+                <h3>Bangle 1</h3>
 
-        <div class="product">
+                <div class="price">
+                    ₹299
+                </div>
+
+                <p>
+                    Beautiful handmade bangle.
+                </p>
+
+                <span class="order-btn">
+                    View Details
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANGLE 2 -->
+
+        <div class="product"
+        onclick="openProduct(
+        'bangle2.jpeg',
+        'Bangle 2',
+        '₹349'
+        )">
+
+            <img src="bangle2.jpeg"
+            alt="Bangle 2">
+
+            <div class="product-info">
+
+                <h3>Bangle 2</h3>
+
+                <div class="price">
+                    ₹349
+                </div>
+
+                <p>
+                    Beautiful handmade bangle.
+                </p>
+
+                <span class="order-btn">
+                    View Details
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANGLE 3 -->
+
+        <div class="product"
+        onclick="openProduct(
+        'bangle3.jpeg',
+        'Bangle 3',
+        '₹399'
+        )">
+
+            <img src="bangle3.jpeg"
+            alt="Bangle 3">
+
+            <div class="product-info">
+
+                <h3>Bangle 3</h3>
+
+                <div class="price">
+                    ₹399
+                </div>
+
+                <p>
+                    Beautiful handmade bangle.
+                </p>
+
+                <span class="order-btn">
+                    View Details
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANGLE 4 -->
+
+        <div class="product"
+        onclick="openProduct(
+        'bangle4.jpeg',
+        'Bangle 4',
+        '₹449'
+        )">
+
+            <img src="bangle4.jpeg"
+            alt="Bangle 4">
+
+            <div class="product-info">
+
+                <h3>Bangle 4</h3>
+
+                <div class="price">
+                    ₹449
+                </div>
+
+                <p>
+                    Beautiful handmade bangle.
+                </p>
+
+                <span class="order-btn">
+                    View Details
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANGLE 5 -->
+
+        <div class="product"
+        onclick="openProduct(
+        'bangle5.jpeg',
+        'Bangle 5',
+        '₹499'
+        )">
+
+            <img src="bangle5.jpeg"
+            alt="Bangle 5">
+
+            <div class="product-info">
+
+                <h3>Bangle 5</h3>
+
+                <div class="price">
+                    ₹499
+                </div>
+
+                <p>
+                    Beautiful handmade bangle.
+                </p>
+
+                <span class="order-btn">
+                    View Details
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- EARRINGS COLLECTION -->
+
+<section id="earrings">
+
+    <div class="section-title">
+
+        <h2>✨ Earrings Collection</h2>
+
+        <p>Beautiful handmade earrings</p>
+
+    </div>
+
+
+    <div class="products">
+
+        <div class="product"
+        onclick="openProduct(
+        'earrings1.jpg',
+        'Designer Earrings',
+        '₹249'
+        )">
 
             <img
-            src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=700&q=80"
+            src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80"
             alt="Designer Earrings">
 
             <div class="product-info">
@@ -638,27 +686,46 @@ footer p {
                 </div>
 
                 <p>
-                    Elegant earrings for every occasion.
+                    Stylish handmade earrings.
                 </p>
 
-                <a
-                class="order-btn"
-                href="https://www.instagram.com/handmade.by_kavya/"
-                target="_blank">
-                    Order Now
-                </a>
+                <span class="order-btn">
+                    View Details
+                </span>
 
             </div>
 
         </div>
 
+    </div>
 
-        <!-- PRODUCT 3 -->
+</section>
 
-        <div class="product">
+
+<!-- HAIR ACCESSORIES COLLECTION -->
+
+<section id="hair">
+
+    <div class="section-title">
+
+        <h2>🌸 Hair Accessories Collection</h2>
+
+        <p>Cute handmade hair accessories</p>
+
+    </div>
+
+
+    <div class="products">
+
+        <div class="product"
+        onclick="openProduct(
+        'hair1.jpg',
+        'Hair Accessories',
+        '₹199'
+        )">
 
             <img
-            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
             alt="Hair Accessories">
 
             <div class="product-info">
@@ -670,15 +737,12 @@ footer p {
                 </div>
 
                 <p>
-                    Pretty accessories for your hairstyle.
+                    Cute handmade hair accessories.
                 </p>
 
-                <a
-                class="order-btn"
-                href="https://www.instagram.com/handmade.by_kavya/"
-                target="_blank">
-                    Order Now
-                </a>
+                <span class="order-btn">
+                    View Details
+                </span>
 
             </div>
 
@@ -691,29 +755,31 @@ footer p {
 
 <!-- ABOUT -->
 
-<section class="about" id="about">
+<section id="about">
 
     <div class="section-title">
 
-        <span>Our Story</span>
-
-        <h2>Made With Love</h2>
+        <h2>About Us</h2>
 
     </div>
 
-
-    <div class="about-content">
+    <div class="about">
 
         <p>
+            Welcome to Handmade by Kavya ❤️
+        </p>
 
-            Handmade by Kavya is a creative handmade accessories brand.
-            Every piece is carefully designed to bring beauty and elegance
-            to your special moments.
-
-            From colourful bangles to beautiful earrings and charming
-            hair accessories, our collection is made with creativity,
+        <p>
+            We create beautiful handmade bangles,
+            earrings and hair accessories with creativity,
             care and love.
+        </p>
 
+        <br>
+
+        <p>
+            Perfect for festivals, weddings, parties,
+            gifts and everyday fashion.
         </p>
 
     </div>
@@ -727,63 +793,44 @@ footer p {
 
     <div class="section-title">
 
-        <span>Why Choose Us</span>
-
-        <h2>Little Things That Matter</h2>
+        <h2>Why Choose Us?</h2>
 
     </div>
 
 
-    <div class="features">
+    <div class="why">
 
+        <div class="why-box">
 
-        <div class="feature">
-
-            <div class="feature-icon">
-                ✨
-            </div>
-
-            <h3>Handmade</h3>
+            <h3>❤️ Handmade</h3>
 
             <p>
-                Every piece is created with care
-                and attention to detail.
+                Each product is carefully handmade.
             </p>
 
         </div>
 
 
-        <div class="feature">
+        <div class="why-box">
 
-            <div class="feature-icon">
-                💖
-            </div>
-
-            <h3>Made With Love</h3>
+            <h3>✨ Unique Designs</h3>
 
             <p>
-                Unique designs created specially
-                for accessory lovers.
+                Beautiful designs for special occasions.
             </p>
 
         </div>
 
 
-        <div class="feature">
+        <div class="why-box">
 
-            <div class="feature-icon">
-                🎁
-            </div>
-
-            <h3>Perfect Gifts</h3>
+            <h3>🎁 Custom Orders</h3>
 
             <p>
-                Beautiful choices for birthdays,
-                festivals and special days.
+                Custom designs are available.
             </p>
 
         </div>
-
 
     </div>
 
@@ -792,41 +839,27 @@ footer p {
 
 <!-- UPI PAYMENT -->
 
-<section class="payment" id="payment">
+<section>
 
-    <div class="section-title">
+    <div class="upi">
 
-        <span>Easy Payment</span>
+        <div class="section-title">
 
-        <h2>Pay With UPI 💳</h2>
+            <h2>UPI Payment</h2>
 
-    </div>
+            <p>
+                Pay easily using UPI
+            </p>
 
-
-    <div class="upi-box">
-
-        <div class="upi-icon">
-            📱
         </div>
-
-        <h3>
-            Handmade by Kavya
-        </h3>
-
-        <p>
-            Use the UPI ID below for your order payment.
-        </p>
 
         <div class="upi-id">
-            badakala.k@ptaxis
+            UPI ID: badakala.k@ptaxis
         </div>
 
-
-        <a
-        class="upi-button"
-        href="upi://pay?pa=badakala.k@ptaxis&pn=Handmade%20by%20Kavya"
-        >
-            Pay via UPI
+        <a class="hero-btn"
+        href="upi://pay?pa=badakala.k@ptaxis&pn=Handmade%20by%20Kavya">
+            Pay with UPI
         </a>
 
     </div>
@@ -834,33 +867,29 @@ footer p {
 </section>
 
 
-<!-- INSTAGRAM -->
+<!-- CONTACT -->
 
-<section class="instagram">
+<section id="contact">
 
-    <div class="section-title">
+    <div class="instagram">
 
-        <span>Follow Our Journey</span>
+        <div class="section-title">
 
-        <h2>See More on Instagram</h2>
+            <h2>Follow Us on Instagram</h2>
+
+            <p>
+                See our latest handmade creations ❤️
+            </p>
+
+        </div>
+
+        <a
+        href="https://www.instagram.com/handmade.by_kavya/"
+        target="_blank">
+            Visit Instagram
+        </a>
 
     </div>
-
-
-    <p>
-        Follow Handmade by Kavya for new designs,
-        collections and custom orders.
-    </p>
-
-
-    <a
-    class="instagram-button"
-    href="https://www.instagram.com/handmade.by_kavya/"
-    target="_blank">
-
-        📷 @handmade.by_kavya
-
-    </a>
 
 </section>
 
@@ -869,35 +898,89 @@ footer p {
 
 <footer>
 
-    <h2>
-        Handmade by Kavya
-    </h2>
-
     <p>
-        Beautiful handmade accessories, made with love.
+        © 2026 Handmade by Kavya
     </p>
 
-
     <p>
-
-        <a
-        class="footer-instagram"
-        href="https://www.instagram.com/handmade.by_kavya/"
-        target="_blank">
-
-            Instagram: @handmade.by_kavya
-
-        </a>
-
-    </p>
-
-
-    <p>
-        © 2026 Handmade by Kavya. All rights reserved.
+        Handmade with ❤️
     </p>
 
 </footer>
 
+
+<!-- PRODUCT POPUP -->
+
+<div id="productPopup"
+class="popup"
+onclick="closeProduct(event)">
+
+    <div class="popup-content">
+
+        <span class="close"
+        onclick="closeProduct(event)">
+            &times;
+        </span>
+
+        <img id="popupImage"
+        src=""
+        alt="Product">
+
+        <h2 id="popupName">
+            Product
+        </h2>
+
+        <div id="popupPrice"
+        class="popup-price">
+            ₹299
+        </div>
+
+        <p>
+            Beautiful handmade product crafted
+            with love by Handmade by Kavya.
+        </p>
+
+        <a
+        class="popup-order"
+        href="https://www.instagram.com/handmade.by_kavya/"
+        target="_blank">
+            Order Now
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openProduct(image, name, price){
+
+    document.getElementById("popupImage").src = image;
+
+    document.getElementById("popupName").innerText = name;
+
+    document.getElementById("popupPrice").innerText = price;
+
+    document.getElementById("productPopup").style.display = "flex";
+
+}
+
+
+function closeProduct(event){
+
+    if(
+        event.target.id === "productPopup" ||
+        event.target.classList.contains("close")
+    ){
+
+        document.getElementById("productPopup").style.display = "none";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
