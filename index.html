@@ -1,425 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Handmade by Kavya</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="site-header">
-
-    <div class="container header-inner">
-
-        <a href="index.html" class="brand">
-
-            <span class="brand-icon">✿</span>
-
-            <div>
-                <strong>Handmade by Kavya</strong>
-                <small>Made with Love</small>
-            </div>
-
-        </a>
-
-
-        <nav class="main-nav">
-
-            <a href="index.html">Home</a>
-
-            <a href="products.html">
-                Shop
-            </a>
-
-            <a href="cart.html">
-                Cart
-                <span id="cartCount">0</span>
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-<!-- =====================================
-     HERO
-===================================== -->
-
-<section class="hero">
-
-    <div class="container hero-inner">
-
-        <div>
-
-            <span class="section-label">
-                HANDMADE WITH LOVE
-            </span>
-
-            <h1>
-                Beautiful Things,
-                Made by Hand.
-            </h1>
-
-            <p>
-                Discover beautiful handmade bangles,
-                earrings and hair accessories,
-                carefully created by Kavya.
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="products.html"
-                    class="btn btn-primary"
-                >
-                    Shop Collection
-                </a>
-
-
-                <a
-                    href="#about"
-                    class="btn btn-outline"
-                >
-                    Our Story
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-image">
-
-            <span>
-                Handmade by Kavya ✿
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     COLLECTION
-===================================== -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            SHOP BY CATEGORY
-        </span>
-
-        <h2>
-            Our Collection
-        </h2>
-
-    </div>
-
-
-    <div class="category-grid">
-
-
-        <!-- BANGLES -->
-
-        <a
-            href="products.html?category=Bangles"
-            class="category-card"
-        >
-
-            <div class="icon">
-                ♡
-            </div>
-
-            <h3>
-                Bangles
-            </h3>
-
-            <p>
-                Beautiful handmade bangles
-                for every occasion.
-            </p>
-
-        </a>
-
-
-        <!-- EARRINGS -->
-
-        <a
-            href="products.html?category=Earrings"
-            class="category-card"
-        >
-
-            <div class="icon">
-                ◇
-            </div>
-
-            <h3>
-                Earrings
-            </h3>
-
-            <p>
-                Handmade earrings designed
-                with love and care.
-            </p>
-
-        </a>
-
-
-        <!-- HAIR ACCESSORIES -->
-
-        <a
-            href="products.html?category=Hair Accessories"
-            class="category-card"
-        >
-
-            <div class="icon">
-                ✿
-            </div>
-
-            <h3>
-                Hair Accessories
-            </h3>
-
-            <p>
-                Cute handmade accessories
-                for your hair.
-            </p>
-
-        </a>
-
-
-    </div>
+<section id="bangles">
+
+<h2 class="section-title">💖 Bangles Collection</h2>
+
+<div class="products">
+
+<div class="product" onclick="openProduct('bangle1.jpg.jpeg','Bangle 1','₹299')">
+<img src="bangle1.jpg.jpeg" alt="Bangle 1">
+<div class="product-info">
+<h3>Bangle 1</h3>
+<div class="price">₹299</div>
+<div class="view-btn">Order Now</div>
+</div>
+</div>
+
+<div class="product" onclick="openProduct('bangle2.jpeg','Bangle 2','₹349')">
+<img src="bangle2.jpeg" alt="Bangle 2">
+<div class="product-info">
+<h3>Bangle 2</h3>
+<div class="price">₹349</div>
+<div class="view-btn">Order Now</div>
+</div>
+</div>
+
+<div class="product" onclick="openProduct('bangle3.jpeg','Bangle 3','₹399')">
+<img src="bangle3.jpeg" alt="Bangle 3">
+<div class="product-info">
+<h3>Bangle 3</h3>
+<div class="price">₹399</div>
+<div class="view-btn">Order Now</div>
+</div>
+</div>
+
+<div class="product" onclick="openProduct('bangle4.jpeg','Bangle 4','₹449')">
+<img src="bangle4.jpeg" alt="Bangle 4">
+<div class="product-info">
+<h3>Bangle 4</h3>
+<div class="price">₹449</div>
+<div class="view-btn">Order Now</div>
+</div>
+</div>
+
+<div class="product" onclick="openProduct('bangle5.jpeg','Bangle 5','₹499')">
+<img src="bangle5.jpeg" alt="Bangle 5">
+<div class="product-info">
+<h3>Bangle 5</h3>
+<div class="price">₹499</div>
+<div class="view-btn">Order Now</div>
+</div>
+</div>
 
 </div>
 
 </section>
-
-
-
-<!-- =====================================
-     WHY HANDMADE
-===================================== -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            WHY CHOOSE US
-        </span>
-
-        <h2>
-            Made Specially for You
-        </h2>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-        <div class="why-card">
-
-            <div class="why-card-icon">
-                ♡
-            </div>
-
-            <h3>
-                Handmade
-            </h3>
-
-            <p>
-                Every piece is carefully
-                handmade with attention to detail.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-card-icon">
-                ✿
-            </div>
-
-            <h3>
-                Unique Designs
-            </h3>
-
-            <p>
-                Find beautiful designs created
-                specially for your collection.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-card-icon">
-                ✨
-            </div>
-
-            <h3>
-                Made With Love
-            </h3>
-
-            <p>
-                Every order is packed with
-                care and love.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-     ABOUT
-===================================== -->
-
-<section
-    class="about-section"
-    id="about"
->
-
-<div class="container">
-
-    <div class="about-inner">
-
-        <span class="section-label">
-            OUR STORY
-        </span>
-
-        <h2>
-            Handmade With Love
-        </h2>
-
-        <p>
-            Handmade by Kavya is a small handmade
-            accessories brand created with love
-            and creativity.
-        </p>
-
-        <br>
-
-        <p>
-            From beautiful bangles and earrings
-            to cute hair accessories, every piece
-            is made with care.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-     INSTAGRAM
-===================================== -->
-
-<section class="instagram-section">
-
-<div class="container">
-
-    <span class="section-label">
-        FOLLOW US
-    </span>
-
-    <h2>
-        See More on Instagram
-    </h2>
-
-    <p>
-        Follow Handmade by Kavya for new designs,
-        collections and updates.
-    </p>
-
-
-    <a
-        href="https://www.instagram.com/handmade.by_kavya/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-primary"
-    >
-        Visit Instagram
-    </a>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-     FOOTER
-===================================== -->
-
-<footer class="site-footer">
-
-<div class="container">
-
-    <div class="footer-brand">
-
-        <span>✿</span>
-
-        <strong>
-            Handmade by Kavya
-        </strong>
-
-    </div>
-
-
-    <p>
-        Handmade accessories crafted with love.
-    </p>
-
-
-    <p class="copyright">
-        © 2026 Handmade by Kavya.
-        All rights reserved.
-    </p>
-
-</div>
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-<script>
-
-updateCartCount();
-
-</script>
-
-</body>
-
-</html>
